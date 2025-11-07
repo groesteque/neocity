@@ -73,7 +73,7 @@ main {
     width: 11%;    
 }
 
-#mediatxt p {
+#mediatxt marquee {
         font-family: Musical;
 }
 
@@ -111,5 +111,6 @@ main {
     --angle: 100deg;
 
 }
+
 
 
