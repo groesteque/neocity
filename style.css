@@ -1,0 +1,101 @@
+:root {
+    --cd-image: url(https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+html,
+body {
+    margin: auto;
+    padding: 0%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+#head {
+    width: 120px;
+}
+
+.menu {
+    position: fixed;
+    right: 0px;
+    width: 30vh;
+    z-index: -1;
+
+}
+
+#yuki img {
+    height: 100vh;
+    width: 30vh;
+}
+
+#okamep {
+    position: fixed;
+    right: 170px;
+    top: 400px;
+    width: 150px;
+    height: 150px;
+    border: none;
+    filter: drop-shadow(0 0 0.25rem gray);
+
+}
+
+#mediatxt {
+    position: fixed;
+    right: 170px;
+    top: 560px;
+    width: 11%;
+}
+
+#okamep::before {
+    content: "";
+    background: var(--cd-image);
+    background-repeat: no-repeat;
+    position: fixed;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+    animation: spin 5s linear infinite;
+    transition: left 0.5s ease;
+}
+
+#okamep::after {
+    --angle: 350deg;
+    content: "";
+    background: url('https://fluorescent-lights.neocities.org/f0rzNHe.png'),
+        linear-gradient(var(--angle), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.6));
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#okamep:hover::before {
+    left: -70px;
+}
+
+#okamep:hover::after {
+    --angle: 100deg;
+}

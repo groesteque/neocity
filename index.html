@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赤い雪の夜 。 。 。</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+
+    <audio id="music" src="https://file.garden/Z3JTKdblz3hn1Ndx/neo/fclef" autoplay></audio>
+    <div id="mediatxt">
+        <marquee> click the CD to play or stop </marquee>
+    </div>
+
+    <!-- (c) disc by Valentine (https://layouts.spacehey.com/layout?id=29048) -->
+    <div id="okamep">
+        <img src="https://file.garden/Z3JTKdblz3hn1Ndx/neo/okamep150.jpg">
+    </div>
+
+    <section class="menu">
+        <div id="yuki">
+            <img src="https://file.garden/Z3JTKdblz3hn1Ndx/neo/yy1.png" style="position: absolute">
+            <img src="https://file.garden/Z3JTKdblz3hn1Ndx/neo/y2.png" style="display: none; position: absolute;">
+        </div>
+    </section>
+
+    <main>
+        <div class="header">
+            <img src="resources/zeroyuki.gif" id="head">
+        </div>
+        dwd
+    </main>
+</body>
+
+<!-- compatability -->
+<script> function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    if (isMobile()) {
+        document.body.style.display = 'none';
+        window.alert("oops! mobile devices aren't supported! please view on desktop . . (¬_¬'')");
+    } else {
+        document.body.style.display = 'block';
+    }
+</script>
+
+<!-- crossfade -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        let images = $('#yuki img');
+        let current = 0;
+
+        setInterval(() => {
+            images.eq(current).fadeOut(1000);
+            current = (current + 1) % images.length;
+            images.eq(current).fadeIn(1000);
+        }, 2500);
+    });
+</script>
+
+<!-- load music -->
+<script>
+    const hoverAudio = document.getElementById('music');
+    const hoverCD = document.querySelector('#okamep');
+
+    hoverCD.addEventListener('click', () => {
+        if (hoverAudio.paused) {
+            hoverAudio.play();
+        } else {
+            hoverAudio.pause();
+        }
+    });
+</script>
+
+
+
+
+</html>
