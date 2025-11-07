@@ -2,6 +2,13 @@
     --cd-image: url(https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png);
 }
 
+@font-face{
+    font-family: Musical;
+    src: url(https://file.garden/Z3JTKdblz3hn1Ndx/neo/Musicals.ttf);
+    
+}
+
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -64,6 +71,8 @@ main {
     right: 170px;
     top: 560px;
     width: 11%;
+    font-family: Musicals;
+    
 }
 
 #okamep::before {
@@ -98,4 +107,5 @@ main {
 
 #okamep:hover::after {
     --angle: 100deg;
+
 }
