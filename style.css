@@ -70,9 +70,11 @@ main {
     position: fixed;
     right: 170px;
     top: 560px;
-    width: 11%;
-    font-family: Musical;
-    
+    width: 11%;    
+}
+
+#mediatxt p {
+        font-family: Musical;
 }
 
 #okamep::before {
@@ -109,4 +111,5 @@ main {
     --angle: 100deg;
 
 }
+
 
